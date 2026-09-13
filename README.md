@@ -9,7 +9,7 @@ Nome do integrante Pedro
 Nome do integrante Elissandra
 Nome do integrante Luana
 
-1. Investigação inicial do projeto
+### 1. Investigação inicial do Projeto
 
 Antes da criação do container, foi realizada uma análise dos arquivos do projeto para identificar a tecnologia utilizada, o arquivo principal, as dependências, a porta da aplicação e os endpoints disponíveis.
 
