@@ -506,6 +506,7 @@ Além disso, foi demonstrada a diferença entre a porta utilizada pela aplicaç�
 Por fim, foram realizados procedimentos de investigação dos containers, visualização de logs, parada, verificação e inicialização novamente de um container.
 
 ### 20. Estrutura final do projeto
+
 api-produtos/
 ├── server.js
 ├── package.json
