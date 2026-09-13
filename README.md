@@ -507,6 +507,8 @@ Por fim, foram realizados procedimentos de investigação dos containers, visual
 
 ### 20. Estrutura final do projeto
 
+
+```text
 api-produtos/
 │
 ├── server.js
@@ -521,5 +523,6 @@ api-produtos/
     ├── etapa4-container.png
     ├── etapa5-postman.png
     └── etapa6-postman.png
+```
 
 O diretório node_modules não foi enviado para o repositório do GitHub, pois as dependências podem ser instaladas novamente utilizando o npm install.
