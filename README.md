@@ -513,4 +513,4 @@ api-produtos/
 ├── Dockerfile
 └── README.md
 
-O diretório node_modules não deve ser enviado para o repositório do GitHub, pois as dependências podem ser instaladas novamente utilizando o npm install.
+O diretório node_modules não foi enviado para o repositório do GitHub, pois as dependências podem ser instaladas novamente utilizando o npm install.
