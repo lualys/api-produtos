@@ -507,6 +507,19 @@ Por fim, foram realizados procedimentos de investigação dos containers, visual
 
 ### 20. Estrutura final do projeto
 
-api-produtos/ ├── server.js ├── package.json ├── package-lock.json ├── Dockerfile ├── README.md ├── api-produtos.postman_collection.json └── imagens/ ├── etapa3-imagem.png ├── etapa4-container.png ├── etapa5-postman.png └── etapa6-postman.png
+api-produtos/
+│
+├── server.js
+├── package.json
+├── package-lock.json
+├── Dockerfile
+├── README.md
+├── api-produtos.postman_collection.json
+│
+└── imagens/
+    ├── etapa3-imagem.png
+    ├── etapa4-container.png
+    ├── etapa5-postman.png
+    └── etapa6-postman.png
 
 O diretório node_modules não foi enviado para o repositório do GitHub, pois as dependências podem ser instaladas novamente utilizando o npm install.
