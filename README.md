@@ -342,7 +342,10 @@ Resultado esperado:
 
 ### Etapa 5 — Testes no Postman
 
-![Testes no Postman](imagens/Postman1.jpeg)(imagens/Postman2.jpeg)(imagens/Postman3.jpeg)(imagens/Postman5.jpeg)
+![Testes no Postman](imagens/Postman1.jpeg)
+![](imagens/Postman2.jpeg)
+![](imagens/Postman3.jpeg)
+![](imagens/Postman5.jpeg)
 
 
 ### Etapa 6 — Novo endpoint
