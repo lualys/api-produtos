@@ -13,7 +13,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://localhost:4000/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            ""
+          ]
         }
       },
       "response": []
@@ -35,7 +43,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://localhost:4000/produtos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "produtos"
+          ]
         }
       },
       "response": []
@@ -46,7 +62,16 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://localhost:4000/produtos/1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "4000",
+          "path": [
+            "produtos",
+            "1"
+          ]
         }
       },
       "response": []
@@ -57,7 +82,15 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://localhost:8080/produtos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "produtos"
+          ]
         }
       },
       "response": []
@@ -68,7 +101,16 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": ""
+          "raw": "http://localhost:8080/produtos/destaque",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "produtos",
+            "destaque"
+          ]
         }
       },
       "response": []
