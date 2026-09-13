@@ -65,7 +65,8 @@ Método	Endpoint	Função
 GET	/	Exibe uma mensagem de boas-vindas
 GET	/produtos	Retorna todos os produtos
 GET	/produtos/:id	Retorna um produto específico pelo ID
-2. Dockerfile
+
+### 2. Dockerfile
 
 Foi criado um Dockerfile para preparar o ambiente necessário para executar a aplicação.
 
@@ -118,7 +119,8 @@ Define o comando executado quando o container é iniciado.
 O comando utiliza o script start do package.json, que executa:
 
 node server.js
-3. Construção da imagem Docker
+
+### 3. Construção da imagem Docker
 
 A primeira imagem da aplicação foi construída utilizando o nome api-produtos e a tag 1.0.
 
@@ -132,7 +134,7 @@ docker images
 
 A imagem api-produtos:1.0 representa uma versão empacotada da aplicação com o ambiente e as dependências necessárias para sua execução.
 
-4. Execução inicial do container
+### 4. Execução inicial do container
 
 A primeira versão da aplicação foi executada em um container chamado:
 
@@ -153,7 +155,7 @@ Para verificar se o container estava em execução:
 
 docker ps
 
-5. Testes da API no Postman
+### 5. Testes da API no Postman
 
 A API foi testada utilizando o Postman.
 
@@ -223,7 +225,7 @@ Status esperado:
 
 200 OK
 
-6. Alteração da aplicação — Produto em destaque
+### 6. Alteração da aplicação — Produto em destaque
 
 Foi adicionada uma nova funcionalidade à API para retornar o produto que possui a propriedade destaque definida como true.
 
@@ -256,7 +258,7 @@ O resultado esperado é:
   "destaque": true
 }
 
-7. Teste da alteração no container antigo
+### 7. Teste da alteração no container antigo
 
 Após modificar o arquivo server.js, foi realizado um teste utilizando o container antigo.
 
@@ -272,7 +274,7 @@ O container foi criado a partir da imagem api-produtos:1.0, que continha a vers�
 
 Portanto, para que a alteração fosse incorporada à aplicação Dockerizada, foi necessário criar uma nova imagem.
 
-8. Construção da versão 2.0
+### 8. Construção da versão 2.0
 
 Após a alteração do código, foi criada uma nova versão da imagem:
 
@@ -288,7 +290,7 @@ Quando o código utilizado para criar uma imagem é alterado, a imagem existente
 
 Por isso, foi necessário executar um novo docker build para criar a imagem api-produtos:2.0.
 
-9. Execução da versão 2.0
+### 9. Execução da versão 2.0
 
 Para executar a nova versão, foi criado um novo container:
 
@@ -309,7 +311,7 @@ Isso significa:
 8080 → porta do computador;
 4000 → porta utilizada pela aplicação dentro do container.
 
-10. Testes da versão 2.0
+### 10. Testes da versão 2.0
 
 Com a nova versão em execução, os endpoints foram acessados pela porta 8080.
 
@@ -353,7 +355,7 @@ Resultado esperado:
 ![Endpoint produto em destaque](imagens/Postman4.jpeg)
 
 
-11. Diferença entre porta do computador e porta do container
+### 11. Diferença entre porta do computador e porta do container
 
 Na versão 2.0 foi utilizado o seguinte mapeamento:
 
@@ -380,7 +382,7 @@ EXPOSE 4000
 
 Apenas foi alterado o mapeamento realizado no docker run.
 
-12. Investigação dos containers
+### 12. Investigação dos containers
 
 Para listar os containers que estavam em execução, foi utilizado:
 
@@ -390,7 +392,7 @@ Para visualizar também os containers que estavam parados:
 
 docker ps -a
 
-13. Visualização dos logs
+### 13. Visualização dos logs
 
 Para verificar o funcionamento da API e as mensagens produzidas pela aplicação, foi utilizado:
 
@@ -398,7 +400,7 @@ docker logs container-produtos-v2
 
 Esse comando permite visualizar os registros gerados pelo container, incluindo a mensagem de inicialização da API.
 
-14. Parar e iniciar o container
+### 14. Parar e iniciar o container
 
 Para parar o container da versão 2.0:
 
@@ -418,7 +420,7 @@ E sua execução foi conferida novamente com:
 
 docker ps
 
-15. O que acontece quando o container é parado?
+### 15. O que acontece quando o container é parado?
 
 Quando o comando docker stop é utilizado, o container deixa de executar a aplicação, mas não é excluído.
 
@@ -434,7 +436,7 @@ docker start container-produtos-v2
 
 a aplicação volta a funcionar e as requisições podem ser realizadas novamente.
 
-16. Diferença entre docker stop e docker rm
+### 16. Diferença entre docker stop e docker rm
 docker stop
 
 Para a execução do container, mas mantém o container existente.
@@ -452,7 +454,7 @@ docker rm container-produtos-v2
 
 Depois de removido, o container não poderá ser iniciado novamente com docker start. Nesse caso, será necessário criar outro container a partir de uma imagem.
 
-17. Imagem x Container
+### 17. Imagem x Container
 
 Uma imagem Docker é um pacote que contém os elementos necessários para criar e executar uma aplicação, como o ambiente, dependências e código.
 
@@ -470,7 +472,7 @@ container-produtos-v2
 
 A imagem pode ser utilizada para criar vários containers, enquanto cada container possui seu próprio estado de execução.
 
-18. Dificuldade encontrada e solução
+### 18. Dificuldade encontrada e solução
 
 Durante a execução da atividade, ocorreu um conflito relacionado ao nome do container durante a criação da segunda versão.
 
@@ -491,7 +493,7 @@ docker run -d --name container-produtos-v2 -p 8080:4000 api-produtos:2.0
 
 Essa situação permitiu compreender melhor a diferença entre o nome do container, a imagem utilizada e o mapeamento das portas.
 
-19. Conclusão
+### 19. Conclusão
 
 A atividade permitiu compreender o processo de containerização de uma aplicação Node.js utilizando Docker.
 
@@ -503,7 +505,7 @@ Além disso, foi demonstrada a diferença entre a porta utilizada pela aplicaç�
 
 Por fim, foram realizados procedimentos de investigação dos containers, visualização de logs, parada, verificação e inicialização novamente de um container.
 
-20. Estrutura final do projeto
+### 20. Estrutura final do projeto
 api-produtos/
 ├── server.js
 ├── package.json
